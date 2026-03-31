@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.xelektron/token-enhancer",
+  "description": "Cuts AI web-fetching costs up to 99.9% by stripping page junk before it reaches your LLM.",
+  "repository": {
+    "url": "https://github.com/xelektron/token-enhancer",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "token-enhancer",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+<!-- mcp-name: io.github.xelektron/token-enhancer -->
 # Token Enhancer
 
 A local proxy that strips web pages down to clean text before they enter your AI agent's context window.
