@@ -5,3 +5,7 @@ __pycache__/
 .DS_Store
 .env
 *.env
+.mcpregistry_*
+dist/
+mcp-publisher
+*.egg-info/
