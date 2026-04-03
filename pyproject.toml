@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "xelektron-token-enhancer"
-version = "0.2.0"
+version = "0.2.1"
 description = "Cuts AI agent web-fetching costs by up to 99.9% by stripping junk from web pages before they reach your LLM"
 readme = "README.md"
 license = {text = "MIT"}
