@@ -20,10 +20,17 @@ Token Enhancer sits between your agent and the web. It fetches the page, strips 
 | Yahoo Finance (AAPL) | 704,760 | 2,625 | **99.6%** |
 | Wikipedia article | 154,440 | 19,479 | **87.4%** |
 | Hacker News | 8,662 | 859 | **90.1%** |
+| GitHub repo page | 171,234 | 6,976 | **95.9%** |
 
-## Quick Start
+## Install
+
+```bash
+pip install xelektron-token-enhancer
 ```
-git clone https://github.com/Boof-Pack/token-enhancer.git
+
+## Quick Start (from source)
+```
+git clone https://github.com/xelektron/token-enhancer.git
 cd token-enhancer
 chmod +x install.sh
 ./install.sh
@@ -51,10 +58,8 @@ curl -s http://localhost:8080/fetch \
 
 This is the plug and play option. Your AI agent discovers the tools automatically and uses them on its own.
 
-Install the MCP dependency:
-```
-source .venv/bin/activate
-pip install mcp
+```bash
+pip install xelektron-token-enhancer
 ```
 
 **Claude Desktop:** Add to your config file
@@ -67,13 +72,11 @@ Windows: `%APPDATA%\Claude\claude_desktop_config.json`
   "mcpServers": {
     "token-enhancer": {
       "command": "python3",
-      "args": ["/FULL/PATH/TO/token-enhancer/mcp_server.py"]
+      "args": ["-m", "mcp_server"]
     }
   }
 }
 ```
-
-Replace `/FULL/PATH/TO/` with the actual path to your clone.
 
 **Cursor:** Add to `.cursor/mcp.json` in your project:
 ```json
@@ -81,7 +84,7 @@ Replace `/FULL/PATH/TO/` with the actual path to your clone.
   "mcpServers": {
     "token-enhancer": {
       "command": "python3",
-      "args": ["/FULL/PATH/TO/token-enhancer/mcp_server.py"]
+      "args": ["-m", "mcp_server"]
     }
   }
 }

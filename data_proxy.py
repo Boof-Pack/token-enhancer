@@ -10,13 +10,14 @@ import time
 import sqlite3
 import hashlib
 from dataclasses import dataclass
+from pathlib import Path
 
 import requests as http_requests
 from bs4 import BeautifulSoup
 from url_validator import validate_url, URLValidationError
 
 
-DB_PATH = "agent_proxy.db"
+DB_PATH = str(Path(__file__).parent / "agent_proxy.db")
 
 
 @dataclass

@@ -11,6 +11,7 @@ import json
 import time
 import sqlite3
 import uuid
+from pathlib import Path
 from flask import Flask, request, jsonify
 from optimizer import optimize_prompt
 from data_proxy import fetch_and_clean, init_data_db
@@ -19,7 +20,7 @@ from url_validator import validate_batch, URLValidationError
 app = Flask(__name__)
 
 PROXY_PORT = 8080
-DB_PATH = "agent_proxy.db"
+DB_PATH = str(Path(__file__).parent / "agent_proxy.db")
 
 
 def init_db():
